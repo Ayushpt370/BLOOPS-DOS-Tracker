@@ -1,0 +1,6 @@
+# Donor names and emails stay on this computer, never in git
+data/
+*.xlsx
+*.csv
+.DS_Store
+node_modules/
