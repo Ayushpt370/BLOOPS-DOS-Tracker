@@ -1,0 +1,9 @@
+{
+  "name": "bloops-giving-tuesday-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Giving Tuesday donor list and outreach tracker for Blueprints for Pangaea",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
