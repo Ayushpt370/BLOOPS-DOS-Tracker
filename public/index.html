@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Giving Tuesday Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="logo">B4P</span>
+      <div>
+        <h1>Giving Tuesday Tracker</h1>
+        <p class="sub" id="countdown"></p>
+      </div>
+    </div>
+    <nav class="tabs" role="tablist">
+      <button data-tab="overview" class="active">Overview</button>
+      <button data-tab="donors">Donor list</button>
+      <button data-tab="campaign">Campaign &amp; emails</button>
+      <button data-tab="outreach">Send outreach</button>
+      <button data-tab="orgs">Organizations</button>
+      <button data-tab="orgoutreach">Org outreach</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- OVERVIEW -->
+    <section id="tab-overview" class="tab active">
+      <div class="grid stats" id="stats"></div>
+      <div class="card">
+        <h2>Fundraising progress</h2>
+        <div id="progress"></div>
+      </div>
+      <div class="grid two">
+        <div class="card">
+          <h2>Contacts by group</h2>
+          <div id="by-group"></div>
+        </div>
+        <div class="card">
+          <h2>Checklist</h2>
+          <ol class="checklist" id="checklist"></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- DONORS -->
+    <section id="tab-donors" class="tab">
+      <div class="card">
+        <h2>Import a list</h2>
+        <p class="muted">Upload an Excel (.xlsx) or CSV file for each group, such as alumni, past officers, current members, gala attendees or past sponsors. From Google Sheets, use File → Download → Microsoft Excel or CSV. People who show up in more than one list are merged by email address or name, and keep every group tag. Emails marked as bounced are skipped.</p>
+        <div class="row wrap">
+          <label class="field">Group
+            <select id="import-group"></select>
+          </label>
+          <label class="field">Spreadsheet (.xlsx or .csv)
+            <input type="file" id="import-file" accept=".xlsx,.csv,text/csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+          </label>
+          <span class="muted">or</span>
+          <button class="ghost" id="paste-toggle">Paste CSV text</button>
+        </div>
+        <textarea id="import-paste" class="hidden" rows="5" placeholder="Name,Email&#10;Jane Doe,jane@example.com"></textarea>
+        <div id="mapping" class="hidden"></div>
+      </div>
+
+      <div class="card">
+        <div class="row wrap between">
+          <h2>All contacts <span class="pill" id="donor-count"></span></h2>
+          <div class="row wrap">
+            <input type="search" id="donor-search" placeholder="Search name, email, org…">
+            <select id="donor-filter"></select>
+            <button class="ghost" id="add-donor">Add person</button>
+            <button class="ghost" id="export-csv">Export CSV</button>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table class="donors">
+            <thead><tr><th>Name</th><th>Email</th><th>Groups</th><th>Pre-email</th><th>Day-of</th><th>Donated</th><th></th></tr></thead>
+            <tbody id="donor-rows"></tbody>
+          </table>
+        </div>
+        <p class="muted empty hidden" id="donor-empty">No contacts yet. Import a CSV above to get started.</p>
+      </div>
+    </section>
+
+    <!-- CAMPAIGN -->
+    <section id="tab-campaign" class="tab">
+      <div class="card">
+        <h2>Campaign details</h2>
+        <p class="muted">These fill in the placeholders in both emails.</p>
+        <div class="grid form">
+          <label class="field">Organization name <input id="c-orgName"></label>
+          <label class="field">Your name (signs the emails) <input id="c-senderName"></label>
+          <label class="field">Giving Tuesday date <input id="c-date" type="date"></label>
+          <label class="field">Fundraising goal ($) <input id="c-goal" type="number" min="0" step="1"></label>
+          <label class="field span2">What we're raising for <input id="c-cause" placeholder="e.g. building a water filtration system for a school in Kenya"></label>
+          <label class="field span2">Donation link <input id="c-donationLink" type="url" placeholder="https://…"></label>
+        </div>
+      </div>
+
+      <div class="grid two">
+        <div class="card" data-template="pre">
+          <h2>Email 1: Heads-up <span class="pill">send a few days before</span></h2>
+          <label class="field">Subject <input class="t-subject"></label>
+          <label class="field">Body <textarea class="t-body" rows="14"></textarea></label>
+        </div>
+        <div class="card" data-template="dayOf">
+          <h2>Email 2: Donate today <span class="pill">send day before or day of</span></h2>
+          <label class="field">Subject <input class="t-subject"></label>
+          <label class="field">Body <textarea class="t-body" rows="14"></textarea></label>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Placeholders</h2>
+        <p class="muted">Type these anywhere in a subject or body:
+          <code>{first_name}</code> <code>{last_name}</code> <code>{org_name}</code> <code>{cause}</code>
+          <code>{goal}</code> <code>{date}</code> <code>{donation_link}</code> <code>{sender_name}</code>
+        </p>
+        <button class="ghost" id="reset-templates">Reset both emails to the default wording</button>
+      </div>
+    </section>
+
+    <!-- OUTREACH -->
+    <section id="tab-outreach" class="tab">
+      <div class="card">
+        <div class="row wrap">
+          <label class="field">Email
+            <select id="o-template">
+              <option value="pre">Email 1: Heads-up</option>
+              <option value="dayOf">Email 2: Donate today</option>
+            </select>
+          </label>
+          <label class="field">Group
+            <select id="o-group"></select>
+          </label>
+          <label class="field">Show
+            <select id="o-status">
+              <option value="unsent">Not sent yet</option>
+              <option value="sent">Already sent</option>
+              <option value="all">Everyone</option>
+            </select>
+          </label>
+        </div>
+        <p class="muted" id="o-summary"></p>
+        <div class="row wrap">
+          <button id="o-copy-bcc">Copy emails for BCC</button>
+          <button class="ghost" id="o-mailmerge">Download mail-merge CSV</button>
+          <button class="ghost" id="o-mark-all">Mark all shown as sent</button>
+        </div>
+        <details class="help">
+          <summary>Which way should I send?</summary>
+          <ul>
+            <li><b>Copy emails for BCC</b>: one email to everyone. Paste the addresses into BCC and use the generic preview below. Fastest.</li>
+            <li><b>Mail-merge CSV</b>: personalized subject and body for each person. Works with Gmail add-ons like YAMM or GMass, or Word/Outlook mail merge.</li>
+            <li><b>Open</b> on a row: opens a ready-to-send email to one person in Gmail. Good for VIPs and sponsors you want to personalize further.</li>
+          </ul>
+        </details>
+      </div>
+
+      <div class="grid two">
+        <div class="card">
+          <h2>Recipients <span class="pill" id="o-count"></span></h2>
+          <ul class="recipients" id="o-list"></ul>
+        </div>
+        <div class="card sticky">
+          <h2>Preview</h2>
+          <p class="muted" id="o-preview-for"></p>
+          <div class="preview">
+            <div class="p-subject" id="o-preview-subject"></div>
+            <pre class="p-body" id="o-preview-body"></pre>
+          </div>
+          <button class="ghost" id="o-copy-preview">Copy this email</button>
+        </div>
+      </div>
+    </section>
+    <!-- ORGANIZATIONS -->
+    <section id="tab-orgs" class="tab">
+      <div class="card">
+        <div class="row wrap between">
+          <h2>Organizations to approach <span class="pill" id="org-count"></span></h2>
+          <div class="row wrap">
+            <input type="search" id="org-search" placeholder="Search organizations…">
+            <select id="org-type"></select>
+            <select id="org-status-filter"></select>
+            <button class="ghost" id="org-add">Add organization</button>
+            <button class="ghost" id="org-export">Export CSV</button>
+          </div>
+        </div>
+        <p class="muted small" id="org-live"></p>
+        <details class="help">
+          <summary>How the likelihood score works</summary>
+          <p>Each organization is rated 0–5 on five factors, weighted into a score out of 100:</p>
+          <ul>
+            <li><b>Connection to B4P (30%)</b>: existing partnership or U-M ties, <b>plus live alumni links</b>. Every alum in your donor list whose company matches adds a point (up to 3), and one more if an alum there is senior or works in philanthropy. Import more people and scores update on their own.</li>
+            <li><b>Mission fit (25%)</b>: health, medical supplies, global health or sustainability.</li>
+            <li><b>Giving track record (20%)</b>: known grants, sponsorships or matching-gift programs.</li>
+            <li><b>Ease of asking (15%)</b>: open application or clear contact, compared with invitation-only.</li>
+            <li><b>Timing (10%)</b>: can realistically give by Giving Tuesday.</li>
+          </ul>
+          <p>Click any organization to see its alumni, sources and contact, and to adjust the factors.</p>
+        </details>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Score</th><th>Organization</th><th>Connection</th><th>Ask</th><th>Point of contact</th><th>Status</th></tr></thead>
+            <tbody id="org-rows"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORG OUTREACH -->
+    <section id="tab-orgoutreach" class="tab">
+      <div class="grid two">
+        <div class="card">
+          <h2>Email to organizations</h2>
+          <p class="muted small">Goes to an organization's point of contact.</p>
+          <label class="field">Subject <input id="ot-org-subject"></label>
+          <label class="field">Body <textarea id="ot-org-body" rows="14"></textarea></label>
+        </div>
+        <div class="card">
+          <h2>Email to alumni at matching-gift employers</h2>
+          <p class="muted small">Goes to each alum at a company that matches donations, asking them to give and submit a match.</p>
+          <label class="field">Subject <input id="ot-alum-subject"></label>
+          <label class="field">Body <textarea id="ot-alum-body" rows="14"></textarea></label>
+        </div>
+      </div>
+      <div class="card">
+        <p class="muted small">Placeholders: <code>{their_org}</code> <code>{contact_name}</code> <code>{ask}</code> <code>{first_name}</code> (alum) <code>{org_name}</code> <code>{cause}</code> <code>{goal}</code> <code>{date}</code> <code>{donation_link}</code> <code>{sender_name}</code>
+          · <button class="link" id="ot-reset">Reset to default wording</button></p>
+      </div>
+
+      <div class="grid two">
+        <div class="card">
+          <div class="row wrap between">
+            <h2>Choose organizations <span class="pill" id="oo-selected-count"></span></h2>
+          </div>
+          <div class="row wrap">
+            <select id="oo-type"></select>
+            <label class="field inline">Min score <input type="number" id="oo-min" value="0" min="0" max="100" step="5" style="width:80px"></label>
+            <select id="oo-status">
+              <option value="">Any status</option>
+              <option>Not contacted</option>
+              <option>Contacted</option>
+            </select>
+          </div>
+          <div class="row wrap" style="margin:10px 0">
+            <button class="ghost small" id="oo-all">Select all shown</button>
+            <button class="ghost small" id="oo-none">Clear selection</button>
+          </div>
+          <ul class="recipients" id="oo-list"></ul>
+        </div>
+        <div class="card sticky">
+          <h2>Send to selected</h2>
+          <p class="muted" id="oo-summary"></p>
+          <div class="row wrap">
+            <button id="oo-csv">Download mail-merge CSV</button>
+            <button class="ghost" id="oo-copy">Copy emails</button>
+            <button class="ghost" id="oo-mark">Mark selected as contacted</button>
+          </div>
+          <h2 style="margin-top:16px">Preview</h2>
+          <p class="muted small" id="oo-preview-for"></p>
+          <div class="preview">
+            <div class="p-subject" id="oo-preview-subject"></div>
+            <pre class="p-body" id="oo-preview-body"></pre>
+          </div>
+          <div class="row wrap" id="oo-preview-actions"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="org-dialog">
+    <form method="dialog" id="org-form">
+      <div class="row between"><h2 id="org-dialog-title">Organization</h2><div class="score-big" id="org-dialog-score"></div></div>
+      <div class="grid form">
+        <label class="field span2">Name <input name="name" required></label>
+        <label class="field">Type <select name="type" id="org-dialog-type"></select></label>
+        <label class="field">Status <select name="status" id="org-dialog-status"></select></label>
+        <label class="field span2">What to ask for <input name="ask"></label>
+        <label class="field span2">Connection to B4P <textarea name="connection" rows="2"></textarea></label>
+        <label class="field span2">Why they might give <textarea name="why" rows="3"></textarea></label>
+        <fieldset class="span2">
+          <legend>Likelihood factors (0–5)</legend>
+          <div id="org-factors" class="factors"></div>
+        </fieldset>
+        <fieldset class="span2">
+          <legend>Alumni connected (live from donor list)</legend>
+          <div id="org-alumni" class="small"></div>
+          <label class="field" style="margin-top:8px">Company keywords to match alumni (comma-separated) <input name="match"></label>
+        </fieldset>
+        <label class="field">Contact name <input name="cname"></label>
+        <label class="field">Contact title <input name="ctitle"></label>
+        <label class="field">Contact email <input name="cemail" type="email"></label>
+        <label class="field">Contact phone <input name="cphone"></label>
+        <label class="field span2">Contact / application page <input name="curl" type="url"></label>
+        <label class="field span2">How to reach them <input name="cmethod"></label>
+        <div class="span2 small" id="org-sources"></div>
+        <label class="field span2">Notes <textarea name="notes" rows="2"></textarea></label>
+      </div>
+      <div class="row between">
+        <button type="button" class="danger ghost" id="org-delete">Delete</button>
+        <div class="row">
+          <button value="cancel" class="ghost" formnovalidate>Cancel</button>
+          <button value="save">Save</button>
+        </div>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="donor-dialog">
+    <form method="dialog" id="donor-form">
+      <h2 id="donor-dialog-title">Edit contact</h2>
+      <div class="grid form">
+        <label class="field">First name <input name="firstName"></label>
+        <label class="field">Last name <input name="lastName"></label>
+        <label class="field span2">Email <input name="email" type="email"></label>
+        <label class="field">Phone <input name="phone"></label>
+        <label class="field">Organization / company <input name="org"></label>
+        <fieldset class="span2">
+          <legend>Groups</legend>
+          <div id="dialog-tags" class="row wrap"></div>
+        </fieldset>
+        <label class="field">Heads-up email sent <input name="preSent" type="date"></label>
+        <label class="field">Donate-today email sent <input name="dayOfSent" type="date"></label>
+        <label class="field">Donation amount ($) <input name="donationAmount" type="number" min="0" step="0.01"></label>
+        <label class="field">Donation date <input name="donationDate" type="date"></label>
+        <label class="field span2">Notes <textarea name="notes" rows="3"></textarea></label>
+        <label class="check span2"><input type="checkbox" name="optOut"> Do not email (opted out)</label>
+      </div>
+      <div class="row between">
+        <button type="button" class="danger ghost" id="donor-delete">Delete</button>
+        <div class="row">
+          <button value="cancel" class="ghost" formnovalidate>Cancel</button>
+          <button value="save" id="donor-save">Save</button>
+        </div>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+  <script src="orgs.js"></script>
+</body>
+</html>
