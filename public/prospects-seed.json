@@ -1,0 +1,444 @@
+{
+  "researchedOn": "2026-11-23",
+  "note": "Public organization info only. Alumni connections are computed live in the app from your local donor list and are never stored in this file.",
+  "prospects": [
+    {
+      "id": "umich-maizeraise",
+      "name": "U-M MaizeRaise crowdfunding + Giving Blueday 2027",
+      "type": "U-M funding",
+      "ask": "Crowdfunding page",
+      "connection": "B4P is a U-M student organization, and U-M runs crowdfunding pages for student orgs.",
+      "why": "MaizeRaise fundraising pages can be requested any time. Giving Blueday 2027 is March 24, and student org registration is due Sunday, Dec 13, 2026, possibly earlier if it fills up. U-M's own Giving Tuesday application was due Oct 4, so that one has passed.",
+      "factors": { "connection": 5, "mission": 3, "history": 5, "access": 5, "timing": 3 },
+      "match": [],
+      "contact": { "name": "", "title": "Maize Days (U-M student org fundraising)", "email": "", "phone": "", "url": "https://maizedays.umich.edu/events/fundraising-opportunities", "method": "Online application" },
+      "sources": [
+        { "label": "Maize Days fundraising opportunities", "url": "https://maizedays.umich.edu/events/fundraising-opportunities" },
+        { "label": "Giving Blueday registration", "url": "https://maizedays.umich.edu/events/maize-days/giving-blueday" }
+      ]
+    },
+    {
+      "id": "umich-sofc",
+      "name": "CSG Student Organization Funding Committee (SOFC)",
+      "type": "U-M funding",
+      "ask": "Event / operating funding",
+      "connection": "B4P is a recognized U-M student organization, so it's eligible.",
+      "why": "Reliable funding for U-M orgs, but it reimburses expenses. It can't be donated to a cause, so it's best for covering shipping and event costs.",
+      "factors": { "connection": 5, "mission": 2, "history": 5, "access": 5, "timing": 2 },
+      "match": [],
+      "contact": { "name": "", "title": "Central Student Government student orgs", "email": "csg.studentorgs@umich.edu", "phone": "734-763-3241", "url": "https://www.csg.umich.edu/sofc", "method": "Email + online application" },
+      "sources": [
+        { "label": "CSG SOFC", "url": "https://www.csg.umich.edu/sofc" },
+        { "label": "CSG funding policies", "url": "https://www.csg.umich.edu/funding-policies" }
+      ]
+    },
+    {
+      "id": "umich-pbsif",
+      "name": "Planet Blue Student Innovation Fund",
+      "type": "U-M funding",
+      "ask": "Grant (up to $30,000)",
+      "connection": "U-M's Graham Sustainability Institute has already listed B4P activity. Recovering medical surplus cuts hospital waste.",
+      "why": "Funds student projects that shrink U-M's environmental footprint. Recovering Michigan Medicine's surplus supplies fits directly. Grants go up to $30,000 for 2025/26.",
+      "factors": { "connection": 4, "mission": 5, "history": 4, "access": 4, "timing": 1 },
+      "match": [],
+      "contact": { "name": "", "title": "Student Sustainability Coalition / Graham Institute", "email": "", "phone": "", "url": "https://planetblue.umich.edu/campus/get-involved/for-students/ssc/grants/pbsif", "method": "Grant application" },
+      "sources": [
+        { "label": "PBSIF page", "url": "https://planetblue.umich.edu/campus/get-involved/for-students/ssc/grants/pbsif" },
+        { "label": "Graham listing of B4P", "url": "https://graham.umich.edu/activity/17880" }
+      ]
+    },
+    {
+      "id": "umich-cghe",
+      "name": "U-M Center for Global Health Equity",
+      "type": "U-M funding",
+      "ask": "Student Org Global Health Equity Challenge",
+      "connection": "U-M center focused on global health, which is exactly what B4P does by sending supplies to low-resource hospitals.",
+      "why": "Runs a yearly pitch competition for student organizations that recently awarded more than $15,000 across five groups.",
+      "factors": { "connection": 4, "mission": 5, "history": 4, "access": 3, "timing": 1 },
+      "match": [],
+      "contact": { "name": "", "title": "CGHE student programming", "email": "", "phone": "", "url": "https://globalhealthequity.umich.edu/get-involved", "method": "Website / pitch competition" },
+      "sources": [
+        { "label": "Pitch competition winners", "url": "https://globalhealthequity.umich.edu/news-events/news/student-teams-win-funding-advance-global-health-solutions-pitch-competition" },
+        { "label": "Get involved", "url": "https://globalhealthequity.umich.edu/get-involved" }
+      ]
+    },
+    {
+      "id": "michigan-medicine",
+      "name": "Michigan Medicine",
+      "type": "Health system",
+      "ask": "Gift, sustainability partnership, in-kind",
+      "connection": "Existing partner: B4P collects Michigan Medicine's excess supplies. Several alumni are medical students there.",
+      "why": "The partnership is already in place. Ask the Office of Development, or the environmental sustainability team (sustainability project manager Stephanie Peters), about supporting the program.",
+      "factors": { "connection": 5, "mission": 5, "history": 3, "access": 3, "timing": 2 },
+      "match": ["michigan medicine", "university of michigan medical school", "michigan medical school"],
+      "contact": { "name": "Stephanie Peters", "title": "Sustainability Project Manager (named publicly; email not listed)", "email": "", "phone": "", "url": "https://www.michiganmedicine.org/giving/contact-us", "method": "Office of Development contact page" },
+      "sources": [
+        { "label": "Michigan Medicine sustainability", "url": "https://www.michiganmedicine.org/community/environmental-social-governance/environmental-sustainability-carbon-neutrality" },
+        { "label": "U-M story on B4P + Michigan Medicine", "url": "https://engaged.umich.edu/news-features/student-run-nonprofit-provides-hundreds-of-excess-medical-supplies-to-ann-arbor-hospitals-with-plans-to-send-more" }
+      ]
+    },
+    {
+      "id": "henry-schein",
+      "name": "Henry Schein Cares Foundation",
+      "type": "Healthcare company",
+      "ask": "Product donation (CARES Package) / grant",
+      "connection": "No direct link yet. Very strong mission fit.",
+      "why": "Its Global Product Donation Program and CARES Packages give medical supplies to nonprofits. Apply at least 6 weeks ahead. Recipients handle international shipping, which B4P already does.",
+      "factors": { "connection": 1, "mission": 5, "history": 5, "access": 4, "timing": 1 },
+      "match": ["henry schein"],
+      "contact": { "name": "", "title": "Henry Schein Cares Foundation", "email": "", "phone": "", "url": "https://www.henryschein.com/us-en/corporate/global-product-donation-program.aspx", "method": "Online application" },
+      "sources": [
+        { "label": "Global Product Donation Program", "url": "https://www.henryschein.com/us-en/corporate/global-product-donation-program.aspx" },
+        { "label": "Donation requests", "url": "https://www.henryschein.com/apply" }
+      ]
+    },
+    {
+      "id": "medline",
+      "name": "Medline (Community Impact Grants)",
+      "type": "Healthcare company",
+      "ask": "Community Impact Grant / product donation",
+      "connection": "No direct link yet. Medical supply maker, strong mission fit.",
+      "why": "Accepts Community Impact Grant and product donation requests on quarterly deadlines, the next one Dec 31. Lists a clear email contact.",
+      "factors": { "connection": 1, "mission": 5, "history": 4, "access": 5, "timing": 2 },
+      "match": ["medline"],
+      "contact": { "name": "", "title": "Environmental, Social & Governance group", "email": "esg@medline.com", "phone": "", "url": "https://punchout.medline.com/about-us/esg/community-engagement/grant-guide", "method": "Email + grant application" },
+      "sources": [
+        { "label": "Medline grant application guide", "url": "https://punchout.medline.com/about-us/esg/community-engagement/grant-guide" }
+      ]
+    },
+    {
+      "id": "stryker",
+      "name": "Stryker",
+      "type": "Healthcare company",
+      "ask": "Charitable contribution / product donation",
+      "connection": "Michigan company (Kalamazoo HQ). Medical device maker.",
+      "why": "Reviews grant and charitable requests on a rolling basis through a web portal. Requests must be in at least 8 weeks ahead. Giving focuses on advancing healthcare.",
+      "factors": { "connection": 2, "mission": 5, "history": 4, "access": 3, "timing": 1 },
+      "match": ["stryker"],
+      "contact": { "name": "", "title": "Stryker giving & volunteering", "email": "", "phone": "", "url": "https://www.stryker.com/us/en/about/corporate-responsibility/giving-back.html", "method": "Online request portal" },
+      "sources": [
+        { "label": "Stryker giving", "url": "https://www.stryker.com/us/en/about/corporate-responsibility/giving-back.html" }
+      ]
+    },
+    {
+      "id": "cardinal-health",
+      "name": "Cardinal Health Foundation",
+      "type": "Healthcare company",
+      "ask": "Grant",
+      "connection": "No direct link yet. Medical supply distributor.",
+      "why": "Gave $6.3M across 232 grants in 2024, mostly to health systems and clinics. Grant programs are competitive and partly run through partner organizations.",
+      "factors": { "connection": 1, "mission": 4, "history": 4, "access": 2, "timing": 1 },
+      "match": ["cardinal health"],
+      "contact": { "name": "", "title": "Cardinal Health community relations", "email": "", "phone": "", "url": "https://www.cardinalhealth.com/en/about-us/corporate-citizenship.html", "method": "Website" },
+      "sources": [
+        { "label": "Cardinal Health Foundation profile", "url": "https://impala.digital/public/profiles/31-1746458/how-to-apply" }
+      ]
+    },
+    {
+      "id": "trinity-health-mi",
+      "name": "Trinity Health Michigan (St. Joseph Mercy Ann Arbor)",
+      "type": "Health system",
+      "ask": "Sponsorship / community grant",
+      "connection": "Ann Arbor hospital, local to B4P. Possible future source of surplus supplies.",
+      "why": "Has an online sponsorship form, which needs 90 days' notice. The Ann Arbor hospitals also run an 'Investing in Our Communities' grant.",
+      "factors": { "connection": 2, "mission": 4, "history": 4, "access": 4, "timing": 1 },
+      "match": ["trinity health", "st. joseph mercy", "st joseph mercy"],
+      "contact": { "name": "", "title": "Sponsorship requests", "email": "", "phone": "", "url": "https://www.trinityhealthmichigan.org/about-us/sponsorship-request", "method": "Online form" },
+      "sources": [
+        { "label": "Sponsorship request", "url": "https://www.trinityhealthmichigan.org/about-us/sponsorship-request" }
+      ]
+    },
+    {
+      "id": "henry-ford-health",
+      "name": "Henry Ford Health",
+      "type": "Health system",
+      "ask": "Community sponsorship",
+      "connection": "Michigan health system. Alumni work or train there.",
+      "why": "Community Sponsorship Program funds 501(c)(3) public charities through an online form. Its priorities lean toward community health, so frame the request around health access.",
+      "factors": { "connection": 2, "mission": 4, "history": 4, "access": 4, "timing": 1 },
+      "match": ["henry ford"],
+      "contact": { "name": "", "title": "Community Sponsorship Program", "email": "", "phone": "", "url": "https://www.henryford.com/development/sponsorship-requests", "method": "Online form" },
+      "sources": [
+        { "label": "Henry Ford sponsorship requests", "url": "https://www.henryford.com/development/sponsorship-requests" }
+      ]
+    },
+    {
+      "id": "bcbsm-foundation",
+      "name": "Blue Cross Blue Shield of Michigan Foundation",
+      "type": "Foundation",
+      "ask": "Grant inquiry",
+      "connection": "Michigan health funder.",
+      "why": "Funds Michigan health initiatives and answers grant questions by email.",
+      "factors": { "connection": 1, "mission": 4, "history": 4, "access": 4, "timing": 1 },
+      "match": ["blue cross", "bcbsm"],
+      "contact": { "name": "", "title": "BCBSM Foundation team", "email": "foundation@bcbsm.com", "phone": "", "url": "https://www.bcbsm.com/foundation/help/contact.html", "method": "Email" },
+      "sources": [
+        { "label": "BCBSM Foundation contact", "url": "https://www.bcbsm.com/foundation/help/contact.html" }
+      ]
+    },
+    {
+      "id": "mi-health-fund",
+      "name": "Michigan Health Endowment Fund",
+      "type": "Foundation",
+      "ask": "Grant (RFP)",
+      "connection": "Michigan health funder.",
+      "why": "Large Michigan health funder. Applications go through RFPs, some needing a concept paper first, so this is a longer-term ask.",
+      "factors": { "connection": 1, "mission": 4, "history": 5, "access": 2, "timing": 1 },
+      "match": [],
+      "contact": { "name": "", "title": "Health Fund", "email": "", "phone": "517-374-0031", "url": "https://mihealthfund.org", "method": "RFP application" },
+      "sources": [
+        { "label": "Health Fund 2026-2031 framework", "url": "https://mihealthfund.org/wp-content/uploads/2025/11/Health-Fund-2026-2031-Strategic-Framework.pdf" }
+      ]
+    },
+    {
+      "id": "aaacf",
+      "name": "Ann Arbor Area Community Foundation",
+      "type": "Foundation",
+      "ask": "Community grant",
+      "connection": "Ann Arbor's community foundation.",
+      "why": "Funds 501(c)(3) groups serving Washtenaw County, so stress the local work, such as supplying Ann Arbor clinics. Contact details come from a third-party listing, so confirm them before emailing.",
+      "factors": { "connection": 3, "mission": 2, "history": 4, "access": 4, "timing": 1 },
+      "match": [],
+      "contact": { "name": "Amina Iqbal", "title": "Senior Community Investment Officer (verify)", "email": "aiqbal@aaacf.org", "phone": "(734) 663-0401 x118", "url": "https://www.aaacf.org", "method": "Email" },
+      "sources": [
+        { "label": "AAACF Community Grantmaking listing", "url": "https://us.fundsforngos.org/type-of-grantgrant/community-grantmaking-program-in-michigan/" }
+      ]
+    },
+    {
+      "id": "a2-rotary",
+      "name": "Rotary Club of Ann Arbor",
+      "type": "Community club",
+      "ask": "International projects support / speaking slot",
+      "connection": "Local service club with an International Projects committee.",
+      "why": "Its community grants focus on kids, but the International Projects committee fits B4P's global work. Asking to speak at a meeting is an easy first step.",
+      "factors": { "connection": 2, "mission": 3, "history": 4, "access": 4, "timing": 2 },
+      "match": ["rotary"],
+      "contact": { "name": "", "title": "Rotary Club of Ann Arbor", "email": "communityallocations@a2rotary.org", "phone": "", "url": "https://www.a2rotary.org/how-we-help/grants/", "method": "Email" },
+      "sources": [
+        { "label": "A2 Rotary grants", "url": "https://www.a2rotary.org/how-we-help/grants/" }
+      ]
+    },
+    {
+      "id": "a2-kiwanis",
+      "name": "Kiwanis Club of Ann Arbor Foundation",
+      "type": "Community club",
+      "ask": "Community grant",
+      "connection": "Local service club.",
+      "why": "Funds Washtenaw County nonprofits, mostly for children and families, so it's a weaker fit. Watch for the next grant cycle.",
+      "factors": { "connection": 2, "mission": 1, "history": 4, "access": 3, "timing": 1 },
+      "match": ["kiwanis"],
+      "contact": { "name": "", "title": "Kiwanis Club of Ann Arbor", "email": "", "phone": "", "url": "https://www.a2kiwanis.org", "method": "Website" },
+      "sources": [
+        { "label": "2023 grant call", "url": "https://clickondetroit.com/all-about-ann-arbor/2023/02/13/kiwanis-club-of-ann-arbor-accepting-applications-for-2023-grants" }
+      ]
+    },
+    {
+      "id": "dte-foundation",
+      "name": "DTE Energy Foundation",
+      "type": "Foundation",
+      "ask": "Relationship-building",
+      "connection": "Michigan company. Alumni have interned there.",
+      "why": "Gives by invitation only, so cold applications don't get through. Best approached through an alum.",
+      "factors": { "connection": 2, "mission": 1, "history": 4, "access": 1, "timing": 1 },
+      "match": ["dte"],
+      "contact": { "name": "", "title": "DTE Energy Foundation", "email": "", "phone": "313-235-5555", "url": "https://www.dteenergy.com/foundation", "method": "Phone / invitation" },
+      "sources": [
+        { "label": "DTE Foundation profile", "url": "https://www.insidephilanthropy.com/michigan-grants/dte-energy-foundation" }
+      ]
+    },
+    {
+      "id": "ford-philanthropy",
+      "name": "Ford Philanthropy",
+      "type": "Foundation",
+      "ask": "Relationship-building / Ford Community Corps",
+      "connection": "Michigan company. Ford Community Corps works with Southeast Michigan college students.",
+      "why": "Gives by invitation only. Ford Community Corps, which partners with Southeast Michigan schools, is the most realistic way in.",
+      "factors": { "connection": 1, "mission": 1, "history": 4, "access": 1, "timing": 1 },
+      "match": ["ford motor"],
+      "contact": { "name": "", "title": "Ford Philanthropy", "email": "", "phone": "", "url": "https://fordfund.org/getting-involved", "method": "Invitation only" },
+      "sources": [
+        { "label": "Ford Fund: how to apply", "url": "https://fordfund.org/getting-involved" }
+      ]
+    },
+    {
+      "id": "match-google",
+      "name": "Google (matching gifts)",
+      "type": "Alumni employer (matching gift)",
+      "ask": "Employee match",
+      "connection": "Alumni work here.",
+      "why": "Matches employee donations 1:1 up to $10,000 with no minimum. An alum donates on Giving Tuesday and Google doubles it.",
+      "factors": { "connection": 0, "mission": 1, "history": 5, "access": 5, "timing": 5 },
+      "match": ["google", "deepmind"],
+      "contact": { "name": "", "title": "Ask alumni here to submit a match", "email": "", "phone": "", "url": "", "method": "Alum submits via employee giving portal" },
+      "sources": [ { "label": "Google matching gift listing", "url": "https://doublethedonation.com/?p=92397" } ]
+    },
+    {
+      "id": "match-bofa",
+      "name": "Bank of America (matching gifts)",
+      "type": "Alumni employer (matching gift)",
+      "ask": "Employee match",
+      "connection": "Alumni work here.",
+      "why": "Matches 1:1 up to $5,000 per employee per year.",
+      "factors": { "connection": 0, "mission": 1, "history": 5, "access": 5, "timing": 5 },
+      "match": ["bank of america"],
+      "contact": { "name": "", "title": "Ask alumni here to submit a match", "email": "", "phone": "", "url": "https://about.bankofamerica.com/en/making-an-impact/matching-gifts-features-and-eligibility", "method": "Alum submits via employee giving portal" },
+      "sources": [ { "label": "BofA matching gifts", "url": "https://about.bankofamerica.com/en/making-an-impact/matching-gifts-features-and-eligibility" } ]
+    },
+    {
+      "id": "match-bloomberg",
+      "name": "Bloomberg (matching gifts)",
+      "type": "Alumni employer (matching gift)",
+      "ask": "Employee match / Dollars for Your Hours",
+      "connection": "Alumni work here.",
+      "why": "Matches 1:1 up to $5,000. Its Dollars for Your Hours program gives $2,500 for 25 volunteer hours. Employees submit through the Best of Bloomberg (BOB) function on the Terminal.",
+      "factors": { "connection": 0, "mission": 1, "history": 5, "access": 4, "timing": 4 },
+      "match": ["bloomberg"],
+      "contact": { "name": "", "title": "Ask alumni here to submit a match", "email": "", "phone": "", "url": "", "method": "Alum submits via BOB on the Terminal" },
+      "sources": [ { "label": "Bloomberg matching listing", "url": "https://doublethedonation.com/matching-gifts/bloomberg" } ]
+    },
+    {
+      "id": "match-jpm",
+      "name": "JPMorgan Chase (matching gifts)",
+      "type": "Alumni employer (matching gift)",
+      "ask": "Employee match",
+      "connection": "Alumni work here.",
+      "why": "Matches 1:1 from $10 to $1,000, but only for gifts made through the company's own giving platform.",
+      "factors": { "connection": 0, "mission": 1, "history": 4, "access": 4, "timing": 5 },
+      "match": ["jpmorgan", "jp morgan", "jpmorganchase"],
+      "contact": { "name": "", "title": "Ask alumni here to give via the internal platform", "email": "", "phone": "", "url": "", "method": "Alum gives via company platform" },
+      "sources": [ { "label": "Matching gift listing", "url": "https://doublethedonation.com/?p=92397" } ]
+    },
+    {
+      "id": "match-bdt",
+      "name": "BDT & MSD Partners",
+      "type": "Alumni employer (matching gift)",
+      "ask": "Intro to firm philanthropy / employee match",
+      "connection": "An alum works on the firm's Philanthropy & Social Impact team.",
+      "why": "The alum works in philanthropy at the firm, so they can best advise on firm giving or introduce you to the right people.",
+      "factors": { "connection": 0, "mission": 2, "history": 3, "access": 4, "timing": 3 },
+      "match": ["bdt"],
+      "contact": { "name": "", "title": "Alum on the Philanthropy & Social Impact team", "email": "", "phone": "", "url": "", "method": "Personal email from B4P" },
+      "sources": []
+    },
+    {
+      "id": "match-mckinsey",
+      "name": "McKinsey & Company",
+      "type": "Alumni employer (matching gift)",
+      "ask": "Employee match (confirm)",
+      "connection": "Alumni work here.",
+      "why": "Matching program not confirmed. Ask alumni to check their benefits portal.",
+      "factors": { "connection": 0, "mission": 1, "history": 3, "access": 3, "timing": 4 },
+      "match": ["mckinsey", "mckensy", "mckinsy"],
+      "contact": { "name": "", "title": "Ask alumni here", "email": "", "phone": "", "url": "", "method": "Alum checks benefits portal" },
+      "sources": []
+    },
+    {
+      "id": "match-bain",
+      "name": "Bain & Company",
+      "type": "Alumni employer (matching gift)",
+      "ask": "Employee match (confirm)",
+      "connection": "Alumni work here.",
+      "why": "Matching program not confirmed. Ask alumni to check their benefits portal.",
+      "factors": { "connection": 0, "mission": 1, "history": 3, "access": 3, "timing": 4 },
+      "match": ["bain"],
+      "contact": { "name": "", "title": "Ask alumni here", "email": "", "phone": "", "url": "", "method": "Alum checks benefits portal" },
+      "sources": []
+    },
+    {
+      "id": "match-bcg",
+      "name": "Boston Consulting Group",
+      "type": "Alumni employer (matching gift)",
+      "ask": "Employee match (confirm)",
+      "connection": "Alumni work here.",
+      "why": "Matching program not confirmed. Ask alumni to check their benefits portal.",
+      "factors": { "connection": 0, "mission": 1, "history": 3, "access": 3, "timing": 4 },
+      "match": ["boston consulting", "bcg"],
+      "contact": { "name": "", "title": "Ask alumni here", "email": "", "phone": "", "url": "", "method": "Alum checks benefits portal" },
+      "sources": []
+    },
+    {
+      "id": "match-morgan-stanley",
+      "name": "Morgan Stanley",
+      "type": "Alumni employer (matching gift)",
+      "ask": "Employee match (confirm)",
+      "connection": "Alumni work or intern here.",
+      "why": "Matching program not confirmed. Ask alumni to check their benefits portal.",
+      "factors": { "connection": 0, "mission": 1, "history": 3, "access": 3, "timing": 4 },
+      "match": ["morgan stanley"],
+      "contact": { "name": "", "title": "Ask alumni here", "email": "", "phone": "", "url": "", "method": "Alum checks benefits portal" },
+      "sources": []
+    },
+    {
+      "id": "match-pwc",
+      "name": "PwC",
+      "type": "Alumni employer (matching gift)",
+      "ask": "Dollars for Racers ($500)",
+      "connection": "Alumni work here.",
+      "why": "Its US match covers only colleges, but 'Dollars for Racers' gives up to $500 when an employee joins a fundraising event.",
+      "factors": { "connection": 0, "mission": 1, "history": 2, "access": 3, "timing": 3 },
+      "match": ["pwc"],
+      "contact": { "name": "", "title": "Ask alumni here", "email": "", "phone": "", "url": "", "method": "Alum submits via YourCause" },
+      "sources": [ { "label": "PwC matching listing", "url": "https://doublethedonation.com/matching-gifts/pwc" } ]
+    },
+    {
+      "id": "match-capital-one",
+      "name": "Capital One",
+      "type": "Alumni employer (matching gift)",
+      "ask": "Personal gifts from alumni",
+      "connection": "Alumni work here.",
+      "why": "Its match appears to cover only schools, and may be inactive, so ask for personal gifts.",
+      "factors": { "connection": 0, "mission": 1, "history": 1, "access": 3, "timing": 3 },
+      "match": ["capital one"],
+      "contact": { "name": "", "title": "Ask alumni here", "email": "", "phone": "", "url": "", "method": "Personal ask" },
+      "sources": [ { "label": "Capital One matching listing", "url": "https://doublethedonation.com/matching-gifts/capital-one-financial-corp" } ]
+    },
+    {
+      "id": "match-coinbase",
+      "name": "Coinbase",
+      "type": "Alumni employer (matching gift)",
+      "ask": "Employee match (confirm)",
+      "connection": "Alumni work here.",
+      "why": "Matching program not confirmed. Ask alumni to check their benefits portal.",
+      "factors": { "connection": 0, "mission": 1, "history": 2, "access": 3, "timing": 4 },
+      "match": ["coinbase"],
+      "contact": { "name": "", "title": "Ask alumni here", "email": "", "phone": "", "url": "", "method": "Alum checks benefits portal" },
+      "sources": []
+    },
+    {
+      "id": "match-aptiv",
+      "name": "Aptiv",
+      "type": "Alumni employer (matching gift)",
+      "ask": "Employee match (confirm)",
+      "connection": "Alumni work here. Large Michigan presence.",
+      "why": "Matching program not confirmed. Ask alumni to check their benefits portal.",
+      "factors": { "connection": 0, "mission": 1, "history": 2, "access": 3, "timing": 4 },
+      "match": ["aptiv"],
+      "contact": { "name": "", "title": "Ask alumni here", "email": "", "phone": "", "url": "", "method": "Alum checks benefits portal" },
+      "sources": []
+    },
+    {
+      "id": "match-susquehanna",
+      "name": "Susquehanna (SIG / SGE)",
+      "type": "Alumni employer (matching gift)",
+      "ask": "Employee match (confirm)",
+      "connection": "Alumni work here.",
+      "why": "Matching program not confirmed. Ask alumni to check their benefits portal.",
+      "factors": { "connection": 0, "mission": 1, "history": 2, "access": 3, "timing": 4 },
+      "match": ["susquehanna"],
+      "contact": { "name": "", "title": "Ask alumni here", "email": "", "phone": "", "url": "", "method": "Alum checks benefits portal" },
+      "sources": []
+    },
+    {
+      "id": "match-imc",
+      "name": "IMC Trading",
+      "type": "Alumni employer (matching gift)",
+      "ask": "Employee match (confirm)",
+      "connection": "Alumni work here.",
+      "why": "Matching program not confirmed. Ask alumni to check their benefits portal.",
+      "factors": { "connection": 0, "mission": 1, "history": 2, "access": 3, "timing": 4 },
+      "match": ["imc trading", "imc"],
+      "contact": { "name": "", "title": "Ask alumni here", "email": "", "phone": "", "url": "", "method": "Alum checks benefits portal" },
+      "sources": []
+    }
+  ]
+}
